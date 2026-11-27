@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: stockpv-api
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm run start -w server
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CLIENT_ORIGIN
+        sync: false
+      - key: SAHI_API_KEY
+        sync: false
+      - key: SAHI_STATIC_IP
+        sync: false
+      - key: DATABASE_URL
+        sync: false
