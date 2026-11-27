@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: stockpv
+    name: stockpv-api
     runtime: node
     plan: free
     buildCommand: npm install
